@@ -1,0 +1,38 @@
+def celebrate():
+    print("Great job, Nadjat!")
+celebrate()
+
+def celebrate_career_change(new_career):
+    print(f"I am excited to become a {new_career}!")
+celebrate_career_change("Data analyst")
+
+def multiply_by_two(number):
+    result = number * 2
+    return(result)
+answer = multiply_by_two(5)
+print(answer)
+
+def calculate_total_pay(base_salary, bonus):
+    total = base_salary + bonus
+    return total
+my_pay = calculate_total_pay(50000, 5000)
+print(my_pay)
+
+def calculate_discount(original_price, discount_amount):
+    final_price = original_price - discount_amount
+    return final_price
+sale_price = calculate_discount(100, 15)
+print(sale_price)
+
+def calculate_average(score1, score2):
+    average = ( score1 + score2) / 2
+    return(average)
+my_average = calculate_average(80, 90)
+print(my_average)
+
+def calculate_profit(revenue, expenses):
+    profit = revenue - expenses
+    return(profit)
+net_profit = calculate_profit(1200, 400)
+print(net_profit)
+
