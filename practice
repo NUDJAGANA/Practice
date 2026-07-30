@@ -81,3 +81,18 @@ def generate_report():
     print("Generating monthly sales report...")
 
 generate_report()
+
+
+def average_sales_per_customer(total_sales, customer_count):
+
+     result = total_sales / customer_count
+     return result
+try:
+    output = average_sales_per_customer(500, 0)
+    print(output)
+
+except ZeroDivisionError:
+        print("Error: Cannot calculate average when customer count is zero!")
+      
+except Exception as e:
+        print("Unexpected error:", e)
