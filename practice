@@ -36,3 +36,48 @@ def calculate_profit(revenue, expenses):
 net_profit = calculate_profit(1200, 400)
 print(net_profit)
 
+company_name = "Data Corp"  # Global variable
+
+def show_info():
+    employee_count = 50     # Local variable
+    print(f"{company_name} has {employee_count} employees.")
+
+show_info()
+
+score = 0  # Global variable (living room whiteboard)
+
+def add_point():
+    global score  # Gives explicit permission to edit the global 'score' variable
+    score = score + 1
+
+add_point()
+print(score)
+
+counter = 10  # Global variable
+
+def reset_counter():
+    global counter 
+    counter = 0
+
+reset_counter()
+print(counter)
+
+user_score = 50  # Global variable
+
+def add_bonus():
+    global user_score #Give permission to modify the global 'user_score' variable
+    user_score = user_score + 20
+add_bonus()
+print(user_score)
+
+def logger_decorator(func):
+    def wrapper():
+        print("Log: Executing function now...")
+        func()
+    return wrapper
+
+@logger_decorator
+def generate_report():
+    print("Generating monthly sales report...")
+
+generate_report()
