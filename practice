@@ -95,4 +95,27 @@ except ZeroDivisionError:
         print("Error: Cannot calculate average when customer count is zero!")
       
 except Exception as e:
-        print("Unexpected error:", e)
+        print(f"Unexpected error:{e}")
+
+import datetime
+
+current_time = datetime.datetime(now)
+
+with open("audit_log.txt", "w") as file:
+     file.write(f"Audit Date: {current_time}")
+
+import random
+orders = ["ORD-101", "ORD-102", "ORD-103", "ORD-104"]
+
+selected_order  = random.choice(orders)
+print(f"Audited order ID: {selected_order}")
+
+with open("audit_log.txt", "r") as file:
+    file_content = file.read() !
+
+print(file_content)
+print(f"Audited order ID: {selected_order}")
+
+
+
+
